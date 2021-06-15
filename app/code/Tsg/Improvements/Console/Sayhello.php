@@ -2,12 +2,15 @@
 
 namespace Tsg\Improvements\Console;
 
+use Magento\Catalog\Api\Data\ProductInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Magento\Catalog\Model\ProductRepository;
-use Tsg\Improvements\Helper\Data;
+use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Store\Model\ScopeInterface;
+use Tsg\Improvements\Configs;
 
 class Sayhello extends Command
 {
@@ -15,13 +18,16 @@ class Sayhello extends Command
     const NAME = 'sku';
 
     private $productRepository;
-    private $helperData;
+    private $scopeConfig;
 
-    public function __construct(ProductRepository $productRepository, Data $helperData, $sku=" ")
+    public function __construct(
+        ProductRepository $productRepository,
+        ScopeConfigInterface $scopeConfig,
+        $skuInput=" ")
     {
         $this->productRepository = $productRepository;
-        $this->helperData = $helperData;
-        parent::__construct($sku);
+        $this->scopeConfig = $scopeConfig;
+        parent::__construct($skuInput);
     }
 
     protected function configure()
@@ -42,19 +48,15 @@ class Sayhello extends Command
         parent::configure();
     }
 
-    // Check the module status (0 - disabled, 1 - enabled)
-
-    protected function isModuleEnabled(): bool
+    private function isModuleEnabled(): bool
     {
-        return $this->helperData->getConfig('improvements/general/enable');
+        return  $this->scopeConfig->getValue(Configs::TSG_IMPROVEMENTS_ENABLE_PATH,ScopeInterface::SCOPE_STORE);
     }
 
-    // Get a product by sku, if not valid - return false
-
-    protected function getProductBySku($sku)
+    private function getProductBySku(?string $skuIput): ?ProductInterface
     {
         try {
-            $product = $sku ? $this->productRepository->get($sku) : null;
+            $product = $skuIput ? $this->productRepository->get($skuIput) : null;
         } catch (\Magento\Framework\Exception\NoSuchEntityException $e) {
             $product = null;
         }
@@ -64,41 +66,29 @@ class Sayhello extends Command
 
     protected function execute(InputInterface $input,OutputInterface $output)
     {
-        // Get an input value
+        $skuIput = $input->getOption(self::NAME);
 
-        $sku= $input->getOption(self::NAME);
+        $productBySku = $this->getProductBySku($skuIput);
 
-        // Get a product by sku
-
-        $product_by_sku = $this->getProductBySku($sku);
-
-        // A case of disabled method
-
-        if (!$this->isModuleEnabled()) {
+        if(!$this->isModuleEnabled()) {
             $output->writeln("You have not enabled a module!");
-            exit();
+            return $this;
         }
 
-        // A case of an empty input or missing input
-
-        if (!$sku) {
+        if(!$skuIput) {
             $output->writeln("You have not entered any value!");
+            return $this;
         }
 
-        // A case of a not valid nonempty input
-
-        if (!$product_by_sku && $sku) {
+        if(!$productBySku && $skuIput) {
             $output->writeln("Entered SKU value is not valid");
+            return $this;
         }
 
-        // A case of a nonempty and a valid input
-
-        if ($sku && $product_by_sku) {
-            $output->writeln(
-                "ID = " . $product_by_sku->getEntityId() . "\r\n" .
-                "Name = " . $product_by_sku->getName() . "\r\n" .
-                "Price = " . $product_by_sku->getPrice());
-        }
+        $output->writeln(
+                "ID = " . $productBySku->getEntityId() . "\r\n" .
+                "Name = " . $productBySku->getName() . "\r\n" .
+                "Price = " . $productBySku->getPrice());
 
         return $this;
     }
