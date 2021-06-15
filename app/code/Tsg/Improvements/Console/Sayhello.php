@@ -38,7 +38,7 @@ class Sayhello extends Command
         $this->setName('improvements:get-product-details')
             ->setDescription('Displays product details by SKU')
             ->setDefinition($options);
-dd
+
         parent::configure();
     }
 
