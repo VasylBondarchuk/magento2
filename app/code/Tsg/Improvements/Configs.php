@@ -1,15 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: vasyl
- * Date: 15.06.21
- * Time: 22:32
- */
 
 namespace Tsg\Improvements;
 
 
 class Configs
 {
-    const TSG_IMPROVEMENTS_ENABLE_PATH = 'improvements/general/enable';
+    const LOG_DIR_PATH = BP."/var/log";
+    const DS = DIRECTORY_SEPARATOR;
+    const DEFAULT_LINES_QTY = 10;
 }

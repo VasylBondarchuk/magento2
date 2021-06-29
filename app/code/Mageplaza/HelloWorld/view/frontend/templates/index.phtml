@@ -1,0 +1,29 @@
+​<h1> Log files details </h1>
+
+<table style="width:100%">
+
+<tr>
+    <th>File Name</th>
+    <th>File Size </th>
+    <th>Modified At</th>
+</tr>
+
+<?php
+
+// BP - path to the root directory
+
+$logDirPath = BP.'/var/log/';
+
+
+// iteration over files in var/log directory
+
+foreach($block->getFilesInDirectory($logDirPath) as $file):?>
+	<tr>
+		<td width="20%"><?php echo $file ?></td>
+		<td width="20%"><?php echo $block->getFileSize($logDirPath.$file)?></td>
+		<td width="20%"><?php echo $block-> getModificationTime($logDirPath.$file)?></td>
+	</tr>
+<?php endforeach; ?>
+
+</table>
+

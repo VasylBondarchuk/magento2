@@ -1,0 +1,40 @@
+<style>
+    table, th, td {
+        font-size: 18px;
+    }
+</style>
+
+
+<?=Tsg\Improvements\Configs::DEFAULT_LINES_QTY." ";?>
+
+last lines of the selected are displayed by default. Enter qty you want to display into the input field and press "Enter" key.
+
+<br><br><hr><br>
+
+<table style="width:60%">
+    <tr>
+        <td>File name: <strong><?= $block->getFileName();?></strong></td>
+        <td>
+            <label for="qty"> Qty of last lines: </label>
+            <input type="number" min="1 " oninput="validity.valid||(value='');" id="qty" name="qty" onchange="updateUrl()">
+        </td>
+        <td><?= $block->displayGoBackLink('createmenubackend/create/index/',"&lArr;Back to Grid");?></td>
+    </tr>
+</table>
+<br>    <hr><br>
+
+<?=$block->getFileContent();?>
+
+<script>
+    function updateUrl()
+    {
+        var linesQty = document.getElementById('qty').value;
+        var currentPageURL = '<?= $block -> getUrl('createmenubackend/create/view/').$block -> getFileName();?>';
+        if(linesQty != 0){
+            window.location = currentPageURL + "/" +  linesQty;
+        }
+    }
+    updateUrl();
+
+</script>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Tsg_Improvements::menu" title="Tsg" module="Tsg_Improvements" sortOrder="10" resource="Magento_Backend::content"/>
+        <add id="Tsg_Improvements::menu_submenu_item" title="Display log files" module="Tsg_Improvements" sortOrder="10" parent="Tsg_Improvements::menu" action="createmenubackend/create/index" resource="Tsg_Improvements::menu_submenu_item"/>
+    </menu>
+</config>
