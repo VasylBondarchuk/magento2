@@ -1,17 +1,10 @@
-<style>
-    table, th, td {
-        font-size: 18px;
-    }
-</style>
-
-
 <?=Tsg\Improvements\Configs::DEFAULT_LINES_QTY." ";?>
 
-last lines of the selected are displayed by default. Enter qty you want to display into the input field and press "Enter" key.
+last lines of the selected file are displayed by default. Enter qty you want to display into the input field and press "Enter" key.
 
 <br><br><hr><br>
 
-<table style="width:60%">
+<table style="width:60%;font-size:18px;">
     <tr>
         <td>File name: <strong><?= $block->getFileName();?></strong></td>
         <td>
@@ -21,11 +14,12 @@ last lines of the selected are displayed by default. Enter qty you want to displ
         <td><?= $block->displayGoBackLink('createmenubackend/create/index/',"&lArr;Back to Grid");?></td>
     </tr>
 </table>
-<br>    <hr><br>
+<br><hr><br>
 
-<?=$block->getFileContent();?>
+<?=$block->displayFileContent();?>
 
 <script>
+
     function updateUrl()
     {
         var linesQty = document.getElementById('qty').value;

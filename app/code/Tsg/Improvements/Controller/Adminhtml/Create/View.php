@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Tsg\Improvements\Controller\Adminhtml\Create;
 
 use Magento\Backend\App\Action\Context;

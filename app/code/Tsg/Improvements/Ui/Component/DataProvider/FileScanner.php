@@ -1,20 +1,35 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Tsg\Improvements\Ui\Component\DataProvider;
 
-use Tsg\Improvements\Configs;
+use Magento\Framework\Filesystem\Driver\File;
 
 class FileScanner
 {
+    private $file;
+
+    public function __construct(File $file)
+    {
+        $this->file = $file;
+    }
+
+    public function getFileName(string $filePath):string
+    {
+       $filePathArray = explode(DS,$filePath);
+       return $filePathArray[count($filePathArray)-1];
+    }
+
     public function getFilesInDirectory(string $directoryPath):array
     {
         $fileNames = [];
-        $content = scandir($directoryPath);
+        $content = $this->file->readDirectory($directoryPath);
 
         foreach($content as $item)
         {
-            if(is_file($directoryPath.Configs::DS.$item)) {
-                $fileNames[] = $item;
+            if($this->file->isFile($item)){
+                $fileNames[] = $this->getFileName($item);
             }
         }
         return $fileNames;
@@ -23,15 +38,15 @@ class FileScanner
     public function getFileSize(string $filePath): string
     {
         $result = "";
-        $bytes = floatval(filesize($filePath));
+        $bytes = floatval($this->file->stat($filePath)['size']);
 
-        $arBytes = array(
-            0 => array("UNIT" => "TB","VALUE" => pow(1024, 4)),
-            1 => array("UNIT" => "GB","VALUE" => pow(1024, 3)),
-            2 => array("UNIT" => "MB","VALUE" => pow(1024, 2)),
-            3 => array("UNIT" => "KB","VALUE" => 1024),
-            4 => array("UNIT" => "B","VALUE" => 1)
-        );
+        $arBytes = [
+            ["UNIT" => "TB","VALUE" => pow(1024, 4)],
+            ["UNIT" => "GB","VALUE" => pow(1024, 3)],
+            ["UNIT" => "MB","VALUE" => pow(1024, 2)],
+            ["UNIT" => "KB","VALUE" => 1024],
+            ["UNIT" => "B","VALUE" => 1]
+        ];
 
         foreach($arBytes as $arItem)
         {
@@ -47,12 +62,11 @@ class FileScanner
 
     public function getModificationTime($filePath): string
     {
-        return date("l, dS F, Y, h:ia", filemtime($filePath));
+        return date("l, dS F, Y, h:ia", $this->file->stat($filePath)['mtime']);
     }
 
     public function getFilesNumber(string $directoryPath):int
     {
         return count($this->getFilesInDirectory($directoryPath));
     }
-
 }

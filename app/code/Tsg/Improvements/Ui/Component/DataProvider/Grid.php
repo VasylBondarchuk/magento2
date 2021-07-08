@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Tsg\Improvements\Ui\Component\DataProvider;
 
 use Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider;
@@ -47,11 +49,11 @@ class Grid extends DataProvider
 
         foreach($this->fileScanner->getFilesInDirectory($directoryPath) as $fileName)
         {
-            $filesDetailsArray[] = array(
+            $filesDetailsArray[] = [
                 'file_name' => $fileName,
-                'file_size' => $this->fileScanner->getFileSize($directoryPath.(Configs::DS).$fileName),
-                'modified_at' => $this->fileScanner->getModificationTime($directoryPath.(Configs::DS).$fileName)
-            );
+                'file_size' => $this->fileScanner->getFileSize($directoryPath.DS.$fileName),
+                'modified_at' => $this->fileScanner->getModificationTime($directoryPath.DS.$fileName)
+            ];
         }
         return $filesDetailsArray;
     }

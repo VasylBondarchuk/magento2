@@ -1,57 +1,64 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Tsg\Improvements\Block\Adminhtml;
 
+use Magento\Framework\Filesystem\Driver\File;
+use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\Template;
+use Magento\Framework\View\Element\Template\Context;
 use Tsg\Improvements\Configs;
 
 class View extends Template
 {
+    private $file;
+    private $urlInterface;
+
+    public function __construct(Context $context, File $file, UrlInterface $urlInterface)
+    {
+        $this->file = $file;
+        $this->urlInterface = $urlInterface;
+        parent::__construct($context);
+    }
+
     public function getCurrentPageUrl()
     {
-        return $this->getRequest()->getUriString();
+        return $this->urlInterface->getCurrentUrl();
     }
 
-    public function getLastLinesQty():int
+    public function getLastLinesQty(): int
     {
-        // retrieve qty as last section of url
-        $qty = basename($this->getCurrentPageUrl());
-
-        return  (is_numeric($qty) && $qty > 0) ? $qty : Configs::DEFAULT_LINES_QTY;
+        $urlArray = explode("/",$this->getCurrentPageUrl());
+        $qty = (int)$urlArray[count($urlArray)-1];
+        return (is_numeric($qty) && $qty > 0) ? $qty : Configs::DEFAULT_LINES_QTY;
     }
 
-    public function getFileName():string
+    public function getFileName(): string
     {
-        $url =  $this->getCurrentPageUrl();
-        return  explode("/",parse_url($url, PHP_URL_PATH))[5];
+        $urlArray = explode("/",$this->getCurrentPageUrl());
+        return $urlArray[7];
     }
 
-    public function getFilePath():string
+    public function getFilePath(): string
     {
-        return Configs::LOG_DIR_PATH.DIRECTORY_SEPARATOR.$this->getFileName();
+        return Configs::LOG_DIR_PATH . DS . $this->getFileName();
     }
 
-    public function getFileContent(int $lastLinesQty = 10):string
+    public function getFileContent(): string
     {
-        $fileContentArray = [];
-
-        if(is_readable($this->getFilePath())){
-            $handle = fopen($this->getFilePath(), "r");
-            if($handle) {
-                while(($line = fgets($handle)) !== false)
-                {
-                    $fileContentArray[] = $line;
-                }
-                fclose($handle);
-            }
-        }
-        return implode("<br>",array_slice($fileContentArray,-$this->getLastLinesQty()));
+        return $this->file->isReadable($this->getFilePath()) ?
+            $this->file->fileGetContents($this->getFilePath()) : " ";
     }
 
-    public function displayGoBackLink(string $path, string $text):string
+    public function displayFileContent(): string
     {
-        return '<a href="'.$this->getUrl($path).'">'.__($text).'</a>';
+        $fileContentArray = explode("\n", $this->getFileContent());
+        return implode("<br>", array_slice($fileContentArray, -($this->getLastLinesQty() + 1)));
+    }
+
+    public function displayGoBackLink(string $path, string $text): string
+    {
+        return '<a href="' . $this->getUrl($path) . '">' . __($text) . '</a>';
     }
 }
-
-

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 namespace Tsg\Improvements\Ui\Component\Listing\Column;
 
 use Magento\Ui\Component\Listing\Columns\Column;
@@ -7,26 +9,10 @@ use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Framework\UrlInterface;
 
-/**
- * Class Actions
- */
 class Actions extends Column
 {
-    /**
-     * Class ProductActions for Listing Columns
-     *
-     * @api
-     * @since 100.0.2
-     */
     protected $urlBuilder;
 
-    /**
-     * @param ContextInterface $context
-     * @param UiComponentFactory $uiComponentFactory
-     * @param UrlInterface $urlBuilder
-     * @param array $components
-     * @param array $data
-     */
     public function __construct(
         ContextInterface $context,
         UiComponentFactory $uiComponentFactory,
@@ -39,15 +25,8 @@ class Actions extends Column
         parent::__construct($context, $uiComponentFactory, $components, $data);
     }
 
-    /**
-     * Prepare Data Source
-     *
-     * @param array $dataSource
-     * @return array
-     */
     public function prepareDataSource(array $dataSource)
     {
-
         if (isset($dataSource['data']['items'])) {
             foreach ($dataSource['data']['items'] as & $item)
             {
@@ -63,7 +42,6 @@ class Actions extends Column
                 ];
             }
         }
-
         return $dataSource;
     }
 }
