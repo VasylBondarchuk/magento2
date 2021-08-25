@@ -1,0 +1,32 @@
+<?php
+echo "<b>Raw data from csv file:</b></br></br>";
+$rawCsvData = $block->getRawCsvData();
+print_r($block->getRawCsvData());
+echo "</br></br>";
+
+echo "<b>Validated data from csv file:</b></br></br>";
+print_r($block->getValidatedCsvData($rawCsvData));
+echo "<br><br>";
+
+echo "<b>Log messages:</b></br></br>";
+echo $block->getErrorMessage(BP. DS .'pub' . DS .'media'. DS . 'import'. DS .'import.csv');
+echo "</br></br>";
+
+echo "<b>List of sources:</b></br></br>";
+$sourceList = $block->getSourceList();
+$source_codes = [];
+foreach ($sourceList as $source) {
+    $source_codes[] = $source->getData()['source_code'];
+}
+print_r($source_codes);
+echo "<br><br>";
+
+echo "<b>Columns names:</b></br></br>";
+print_r($block->getCsvColumnNames(BP. DS .'pub' . DS .'media'. DS . 'import'. DS .'import.csv'));
+echo "<br><br>";
+
+echo "<b> Direct Raw data:</b></br></br>";
+print_r($block->getCsvDirectRawData(BP. DS .'pub' . DS .'media'. DS . 'import'. DS .'import.csv'));
+
+
+

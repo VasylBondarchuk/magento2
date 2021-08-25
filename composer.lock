@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a238662b311575af37b9138953be22b5",
+    "content-hash": "771ecc035da391e23d24e94314d96ad0",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -3757,6 +3757,94 @@
             "time": "2020-06-15T17:52:31+00:00"
         },
         {
+            "name": "magento/inventory-metapackage",
+            "version": "1.2.0-dev",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/_metapackage",
+                "reference": "6c342e02de2a58e4d25fbb75fd9b8871d69b7466"
+            },
+            "require": {
+                "magento/module-inventory": "*",
+                "magento/module-inventory-admin-ui": "*",
+                "magento/module-inventory-advanced-checkout": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-bundle-import-export": "*",
+                "magento/module-inventory-bundle-product": "*",
+                "magento/module-inventory-bundle-product-admin-ui": "*",
+                "magento/module-inventory-bundle-product-indexer": "*",
+                "magento/module-inventory-cache": "*",
+                "magento/module-inventory-catalog": "*",
+                "magento/module-inventory-catalog-admin-ui": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-catalog-frontend-ui": "*",
+                "magento/module-inventory-catalog-search": "*",
+                "magento/module-inventory-catalog-search-bundle-product": "*",
+                "magento/module-inventory-catalog-search-configurable-product": "*",
+                "magento/module-inventory-configurable-product": "*",
+                "magento/module-inventory-configurable-product-admin-ui": "*",
+                "magento/module-inventory-configurable-product-frontend-ui": "*",
+                "magento/module-inventory-configurable-product-indexer": "*",
+                "magento/module-inventory-configuration": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-distance-based-source-selection": "*",
+                "magento/module-inventory-distance-based-source-selection-admin-ui": "*",
+                "magento/module-inventory-distance-based-source-selection-api": "*",
+                "magento/module-inventory-elasticsearch": "*",
+                "magento/module-inventory-export-stock": "*",
+                "magento/module-inventory-export-stock-api": "*",
+                "magento/module-inventory-graph-ql": "*",
+                "magento/module-inventory-grouped-product": "*",
+                "magento/module-inventory-grouped-product-admin-ui": "*",
+                "magento/module-inventory-grouped-product-indexer": "*",
+                "magento/module-inventory-import-export": "*",
+                "magento/module-inventory-in-store-pickup": "*",
+                "magento/module-inventory-in-store-pickup-admin-ui": "*",
+                "magento/module-inventory-in-store-pickup-api": "*",
+                "magento/module-inventory-in-store-pickup-frontend": "*",
+                "magento/module-inventory-in-store-pickup-graph-ql": "*",
+                "magento/module-inventory-in-store-pickup-multishipping": "*",
+                "magento/module-inventory-in-store-pickup-quote": "*",
+                "magento/module-inventory-in-store-pickup-quote-graph-ql": "*",
+                "magento/module-inventory-in-store-pickup-sales": "*",
+                "magento/module-inventory-in-store-pickup-sales-admin-ui": "*",
+                "magento/module-inventory-in-store-pickup-sales-api": "*",
+                "magento/module-inventory-in-store-pickup-shipping": "*",
+                "magento/module-inventory-in-store-pickup-shipping-admin-ui": "*",
+                "magento/module-inventory-in-store-pickup-shipping-api": "*",
+                "magento/module-inventory-in-store-pickup-webapi-extension": "*",
+                "magento/module-inventory-indexer": "*",
+                "magento/module-inventory-low-quantity-notification": "*",
+                "magento/module-inventory-low-quantity-notification-admin-ui": "*",
+                "magento/module-inventory-low-quantity-notification-api": "*",
+                "magento/module-inventory-multi-dimensional-indexer-api": "*",
+                "magento/module-inventory-product-alert": "*",
+                "magento/module-inventory-quote-graph-ql": "*",
+                "magento/module-inventory-requisition-list": "*",
+                "magento/module-inventory-reservation-cli": "*",
+                "magento/module-inventory-reservations": "*",
+                "magento/module-inventory-reservations-api": "*",
+                "magento/module-inventory-sales": "*",
+                "magento/module-inventory-sales-admin-ui": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-inventory-sales-frontend-ui": "*",
+                "magento/module-inventory-setup-fixture-generator": "*",
+                "magento/module-inventory-shipping": "*",
+                "magento/module-inventory-shipping-admin-ui": "*",
+                "magento/module-inventory-source-deduction-api": "*",
+                "magento/module-inventory-source-selection": "*",
+                "magento/module-inventory-source-selection-api": "*",
+                "magento/module-inventory-swatches-frontend-ui": "*",
+                "magento/module-inventory-visual-merchandiser": "*",
+                "magento/module-inventory-wishlist": "*"
+            },
+            "type": "metapackage",
+            "description": "Metapackage with Magento Inventory modules for simple installation",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "magento/magento-composer-installer",
             "version": "0.2.1",
             "source": {
@@ -3837,6 +3925,2553 @@
                 "source": "https://github.com/magento/magento-composer-installer/tree/0.2.1"
             },
             "time": "2021-03-04T20:05:10+00:00"
+        },
+        {
+            "name": "magento/module-inventory",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/Inventory",
+                "reference": "81387dd3d8e42f53f32b3500c9c4fac254e39506"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\Inventory\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-admin-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryAdminUi",
+                "reference": "cf2c93e9b61590d43b627ee097745ef13996c724"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-backend": "*",
+                "magento/module-directory": "*",
+                "magento/module-inventory": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-ui": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryAdminUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-advanced-checkout",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryAdvancedCheckout",
+                "reference": "90e568ec5a9ec1ad42709ee405eb08eef910b2e0"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-advanced-checkout": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryAdvancedCheckout\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryApi",
+                "reference": "228911bb28745f6db1a215bfbaeee8d0425f72fa"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-bundle-import-export",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryBundleImportExport",
+                "reference": "c89d6f16739584e1b3211e3878be9372a2fb9567"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-bundle-import-export": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryBundleImportExport\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-bundle-product",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryBundleProduct",
+                "reference": "713bac99eb4b1f830661eb33934f4adaadc64843"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-bundle": "*",
+                "magento/module-catalog": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-catalog-inventory": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryBundleProduct\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-bundle-product-admin-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryBundleProductAdminUi",
+                "reference": "da922bd7c7b1965f8616bfd53e97007cdcc43c73"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-bundle": "*",
+                "magento/module-catalog": "*",
+                "magento/module-inventory-catalog-admin-ui": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-ui": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-inventory-configuration-api": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryBundleProductAdminUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-bundle-product-indexer",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryBundleProductIndexer",
+                "reference": "9aa06f3ba2a387bed6b16e854d1928272a82d1ab"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-bundle": "*",
+                "magento/module-catalog": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-indexer": "*",
+                "magento/module-inventory-multi-dimensional-indexer-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-inventory": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryBundleProductIndexer\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-cache",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryCache",
+                "reference": "db98ae147c82d0711d1e39171d65c7fa16044da4"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-indexer": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-catalog": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryCache\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-catalog",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryCatalog",
+                "reference": "2e0d63e06978524357422c52779ea3f804a2b42d"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-catalog-inventory": "*",
+                "magento/module-inventory": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-configuration": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-indexer": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-inventory-reservations-api": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryCatalog\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-catalog-admin-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryCatalogAdminUi",
+                "reference": "a1d55224f65f1dd9fc71f2b7ee16755e2dc30da9"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-asynchronous-operations": "*",
+                "magento/module-backend": "*",
+                "magento/module-catalog": "*",
+                "magento/module-catalog-inventory": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-indexer": "*",
+                "magento/module-ui": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-inventory-admin-ui": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryCatalogAdminUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-catalog-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryCatalogApi",
+                "reference": "e3a5b0d2a1a64be02606bbec580eec80e9bd9801"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryCatalogApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-catalog-frontend-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryCatalogFrontendUi",
+                "reference": "db907dff79488079cfab05a17912a77511b234f7"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-inventory-catalog": "*",
+                "magento/module-inventory-catalog-api": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryCatalogFrontendUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-catalog-search",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryCatalogSearch",
+                "reference": "c074f9234a652bdb148b28ec9556421cb0ce95ac"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog-inventory": "*",
+                "magento/module-catalog-search": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-indexer": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryCatalogSearch\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-catalog-search-bundle-product",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryCatalogSearchBundleProduct",
+                "reference": "feda8cf8f878e1f336a5d95c1e42c6044202aff7"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-bundle": "*",
+                "magento/module-catalog": "*",
+                "magento/module-eav": "*",
+                "magento/module-inventory-catalog-search": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryCatalogSearchBundleProduct\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-catalog-search-configurable-product",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryCatalogSearchConfigurableProduct",
+                "reference": "d9ec72c7abe45d94d29bb36f4ea66e4289d009f1"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-configurable-product": "*",
+                "magento/module-eav": "*",
+                "magento/module-inventory-catalog-search": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryCatalogSearchConfigurableProduct\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-configurable-product",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryConfigurableProduct",
+                "reference": "29b04e37de9155c1c75d24c6f70b293be1873512"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-catalog-inventory": "*",
+                "magento/module-configurable-product": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-indexer": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-sales": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryConfigurableProduct\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-configurable-product-admin-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryConfigurableProductAdminUi",
+                "reference": "6d8863765fc1e38b99b76106d311faa880aa91e2"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-configurable-product": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-ui": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryConfigurableProductAdminUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-configurable-product-frontend-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryConfigurableProductFrontendUi",
+                "reference": "056f09431316d0612963aa2e092d01725851a19a"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-configurable-product": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-inventory-catalog": "*",
+                "magento/module-inventory-configurable-product": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryConfigurableProductFrontendUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-configurable-product-indexer",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryConfigurableProductIndexer",
+                "reference": "0543ef94421b9458be4451ca6ef4b1a01b0ce119"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-indexer": "*",
+                "magento/module-inventory-multi-dimensional-indexer-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-inventory": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryConfigurableProductIndexer\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-configuration",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryConfiguration",
+                "reference": "6e2abad86ed9177179ba136089f7e782014de21a"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog-inventory": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryConfiguration\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-configuration-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryConfigurationApi",
+                "reference": "97c3860b4fb8398a1d5a97b1798e6d7bb44c90aa"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryConfigurationApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-distance-based-source-selection",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryDistanceBasedSourceSelection",
+                "reference": "b7df09b75a124500ecba59b276738145be8039c2"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-config": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-distance-based-source-selection-api": "*",
+                "magento/module-inventory-source-selection-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryDistanceBasedSourceSelection\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-distance-based-source-selection-admin-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryDistanceBasedSourceSelectionAdminUi",
+                "reference": "4d19c8167bbb74803cde2891073e816be875aae9"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryDistanceBasedSourceSelectionAdminUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-distance-based-source-selection-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryDistanceBasedSourceSelectionApi",
+                "reference": "f0c0368b117c85ee122e5bfcc7274276d6206eac"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-source-selection-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryDistanceBasedSourceSelectionApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-elasticsearch",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryElasticsearch",
+                "reference": "af71b65c6329b2e7e3852b11004f817ee0512359"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog-inventory": "*",
+                "magento/module-catalog-search": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-indexer": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryElasticsearch\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-export-stock",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryExportStock",
+                "reference": "1e768d90533f79da9de62587d1471becaca3bb4e"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-catalog-inventory": "*",
+                "magento/module-configurable-product": "*",
+                "magento/module-grouped-product": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-configuration": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-export-stock-api": "*",
+                "magento/module-inventory-indexer": "*",
+                "magento/module-inventory-sales": "*",
+                "magento/module-inventory-sales-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryExportStock\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-export-stock-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryExportStockApi",
+                "reference": "937b7d6c464e483aefac0789ba6dca1dc457e55a"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-sales-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryExportStockApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-graph-ql",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryGraphQl",
+                "reference": "1b0267914fb9a5730b41e131626b02fc52050dce"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-inventory-catalog": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryGraphQl\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-grouped-product",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryGroupedProduct",
+                "reference": "5ff11404274b2debdcc4e41d711021841c41f988"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-grouped-product": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-inventory-catalog": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-configuration-api": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryGroupedProduct\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-grouped-product-admin-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryGroupedProductAdminUi",
+                "reference": "b10e34192458905dc79e99ae4ce8a47a3c86f964"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-grouped-product": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-admin-ui": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-ui": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-inventory-configuration-api": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryGroupedProductAdminUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-grouped-product-indexer",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryGroupedProductIndexer",
+                "reference": "37f87235f1d6e7acac21bc5bd0dc82ce2945dd5c"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-grouped-product": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-indexer": "*",
+                "magento/module-inventory-multi-dimensional-indexer-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-inventory": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryGroupedProductIndexer\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-import-export",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryImportExport",
+                "reference": "10a16b52386e9883f1a10950a52d4fb43b0be7fa"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-eav": "*",
+                "magento/module-import-export": "*",
+                "magento/module-inventory": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-catalog-import-export": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryImportExport\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickup",
+                "reference": "f9ebf22a2acdf3731ac9d8589cabf98427a8c475"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-directory": "*",
+                "magento/module-inventory": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-distance-based-source-selection-api": "*",
+                "magento/module-inventory-in-store-pickup-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-inventory-source-selection-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickup\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-admin-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupAdminUi",
+                "reference": "82a0f55cfd06dd413f851aa1d70d259d181c69cc"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-admin-ui": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-in-store-pickup-api": "*",
+                "magento/module-ui": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupAdminUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupApi",
+                "reference": "7670a207b4db9ab860b631c000cb8ed030c15319"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-frontend",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupFrontend",
+                "reference": "846ed66fbda30873c06fa2909b927e9d1e064f1f"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-checkout": "*",
+                "magento/module-inventory-in-store-pickup-api": "*",
+                "magento/module-inventory-in-store-pickup-sales-api": "*",
+                "magento/module-inventory-in-store-pickup-shipping-api": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupFrontend\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-graph-ql",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupGraphQl",
+                "reference": "60d91e3c3b02618571f0aa1010c112e1fc4eb813"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-in-store-pickup-api": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupGraphQl\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-multishipping",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupMultishipping",
+                "reference": "23a430cfc59ba87781ed44ac3b9069211f544c64"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-checkout": "*",
+                "magento/module-inventory-in-store-pickup-shipping-api": "*",
+                "magento/module-quote": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupMultishipping\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-quote",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupQuote",
+                "reference": "53119f1cc21c434193d45ff5c6c75c090b219091"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-in-store-pickup": "*",
+                "magento/module-inventory-in-store-pickup-api": "*",
+                "magento/module-inventory-in-store-pickup-shipping-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-quote": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupQuote\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-quote-graph-ql",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupQuoteGraphQl",
+                "reference": "664ece7ab8deb92f5d2ddea38d9136f156b893ac"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-graph-ql": "*",
+                "magento/module-quote": "*",
+                "magento/module-quote-graph-ql": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupQuoteGraphQl\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-sales",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupSales",
+                "reference": "0493dd70368e8a3ff8603d6f48dd3055d4c1b6f9"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-in-store-pickup-api": "*",
+                "magento/module-inventory-in-store-pickup-sales-api": "*",
+                "magento/module-inventory-source-selection-api": "*",
+                "magento/module-sales": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupSales\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-sales-admin-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupSalesAdminUi",
+                "reference": "72cfccead7940c91f8ebd7014f4f19e5d6fe9f1c"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-backend": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-in-store-pickup-quote": "*",
+                "magento/module-inventory-in-store-pickup-sales": "*",
+                "magento/module-inventory-in-store-pickup-sales-api": "*",
+                "magento/module-inventory-in-store-pickup-shipping-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-quote": "*",
+                "magento/module-sales": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupSalesAdminUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-sales-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupSalesApi",
+                "reference": "5de3634821e5afe269e72a3ceb41601c2d8d87d5"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupSalesApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-shipping",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupShipping",
+                "reference": "f82442b92cfd27b128b350db6b9d191acfbc12bc"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-inventory-in-store-pickup-api": "*",
+                "magento/module-inventory-in-store-pickup-shipping-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-quote": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupShipping\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-shipping-admin-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupShippingAdminUi",
+                "reference": "20f28b6e307d5e1c02eaf707d0fd77f2b1f8ff7c"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-in-store-pickup-shipping-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-shipping": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupShippingAdminUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-shipping-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupShippingApi",
+                "reference": "639f9dd8c9681fb73796c15d179ab8514719ab23"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-quote": "*",
+                "magento/module-shipping": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupShippingApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-in-store-pickup-webapi-extension",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryInStorePickupWebapiExtension",
+                "reference": "6f3cda01a08a0afd7e2f34d6b4c25040bcc90444"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-webapi": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryInStorePickupWebapiExtension\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "abandoned": true,
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-indexer",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryIndexer",
+                "reference": "fe80bf1dc0dd1475baf4513d098b4d7a3ca862a8"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/framework-message-queue": "*",
+                "magento/module-inventory": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-multi-dimensional-indexer-api": "*",
+                "magento/module-inventory-sales": "*",
+                "magento/module-inventory-sales-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-catalog": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryIndexer\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-low-quantity-notification",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryLowQuantityNotification",
+                "reference": "7218a9286a9bec548079d5f84bbc715f414fcf53"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-catalog-inventory": "*",
+                "magento/module-eav": "*",
+                "magento/module-inventory": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-low-quantity-notification-api": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryLowQuantityNotification\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-low-quantity-notification-admin-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryLowQuantityNotificationAdminUi",
+                "reference": "8166b036456c33e465445d86a91a309313b88c2c"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-backend": "*",
+                "magento/module-catalog": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-low-quantity-notification": "*",
+                "magento/module-inventory-low-quantity-notification-api": "*",
+                "magento/module-reports": "*",
+                "magento/module-ui": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryLowQuantityNotificationAdminUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-low-quantity-notification-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryLowQuantityNotificationApi",
+                "reference": "6392a7106c79489530db2ce03cc80fb3fe1a75f4"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryLowQuantityNotificationApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-multi-dimensional-indexer-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryMultiDimensionalIndexerApi",
+                "reference": "e1f1b848d6706b051daba1823565ebc91a994216"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryMultiDimensionalIndexerApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-product-alert",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryProductAlert",
+                "reference": "88cd3f6479741bbcd36d12e7e9d481b0fb1017de"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-backend": "*",
+                "magento/module-catalog": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-product-alert": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-product-alert": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryProductAlert\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-quote-graph-ql",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryQuoteGraphQl",
+                "reference": "42208b0d38f38bedd8469eb53af8e6e6f7f1112b"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-catalog": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-quote": "*",
+                "magento/module-quote-graph-ql": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryQuoteGraphQl\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-requisition-list",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryRequisitionList",
+                "reference": "9bee8a8f12c2d06577fadb69af8fc2fd939cd5aa"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "php": "~7.1.3||~7.2.0||~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-requisition-list": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryRequisitionList\\": ""
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-reservation-cli",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryReservationCli",
+                "reference": "0d23952d89754d20b7cf8115219c768a0157a382"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-reservations-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-sales": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryReservationCli\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-reservations",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryReservations",
+                "reference": "735c2f65180070edb3b2e3daf37f0845e47a1a89"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-reservations-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryReservations\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-reservations-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryReservationsApi",
+                "reference": "f074b4b686183327c9884c13b7f0569f40a5716f"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryReservationsApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-sales",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventorySales",
+                "reference": "6e121db44fc2e86680e79885bdb1734d987b5f5d"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-catalog-inventory": "*",
+                "magento/module-inventory": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-reservations-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-inventory-source-deduction-api": "*",
+                "magento/module-inventory-source-selection-api": "*",
+                "magento/module-sales": "*",
+                "magento/module-sales-inventory": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "require-dev": {
+                "magento/module-inventory-indexer": "*"
+            },
+            "suggest": {
+                "magento/module-inventory-catalog": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySales\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-sales-admin-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventorySalesAdminUi",
+                "reference": "48da6b0af25891aa542784835bdc67a415f5ec14"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-backend": "*",
+                "magento/module-catalog": "*",
+                "magento/module-catalog-inventory": "*",
+                "magento/module-inventory-admin-ui": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-store": "*",
+                "magento/module-ui": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-sales": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySalesAdminUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-sales-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventorySalesApi",
+                "reference": "8e805a88a026195714b0e60ab8922957077ab047"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-sales": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySalesApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-sales-frontend-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventorySalesFrontendUi",
+                "reference": "585842bda57db9f00c11dc73f75299544704decf"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog-inventory": "*",
+                "magento/module-inventory-catalog-frontend-ui": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySalesFrontendUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-setup-fixture-generator",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventorySetupFixtureGenerator",
+                "reference": "9c796dfd5706f5bcf652a9f36ec9745607cf3dc7"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySetupFixtureGenerator\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-shipping",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryShipping",
+                "reference": "ec8eee1426a0683131ace3c70bafc6eb76f6b1c6"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-inventory-source-deduction-api": "*",
+                "magento/module-inventory-source-selection-api": "*",
+                "magento/module-sales": "*",
+                "magento/module-shipping": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryShipping\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-shipping-admin-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryShippingAdminUi",
+                "reference": "8ff4223e30e72f835d2183cbc285c655b128d160"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-backend": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-inventory-source-selection-api": "*",
+                "magento/module-sales": "*",
+                "magento/module-shipping": "*",
+                "magento/module-ui": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryShippingAdminUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-source-deduction-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventorySourceDeductionApi",
+                "reference": "80992c86dce4f68a74111ae3b987746054f1b954"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-configuration-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySourceDeductionApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-source-selection",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventorySourceSelection",
+                "reference": "57a748916076a2082509639c9bf1380758d3855c"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-source-selection-api": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySourceSelection\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-source-selection-api",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventorySourceSelectionApi",
+                "reference": "4a055cb447938aad5723abf88be0d2613133bcec"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-sales": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySourceSelectionApi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-swatches-frontend-ui",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventorySwatchesFrontendUi",
+                "reference": "f739a529e3d6bf7e6285a77f111d5735124c2bd7"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-inventory-configurable-product-frontend-ui": "*",
+                "magento/module-swatches": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventorySwatchesFrontendUi\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-visual-merchandiser",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryVisualMerchandiser",
+                "reference": "7622052e4d176cb02759db0d02864e5a939a1781"
+            },
+            "require": {
+                "magento/framework": "*",
+                "magento/module-catalog": "*",
+                "magento/module-inventory": "*",
+                "magento/module-inventory-catalog-api": "*",
+                "magento/module-inventory-indexer": "*",
+                "magento/module-inventory-sales-api": "*",
+                "magento/module-store": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "require-dev": {
+                "magento/module-inventory-api": "*",
+                "magento/module-inventory-configuration-api": "*"
+            },
+            "suggest": {
+                "magento/module-visual-merchandiser": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryVisualMerchandiser\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "magento/module-inventory-wishlist",
+            "version": "dev-1.2-develop",
+            "dist": {
+                "type": "path",
+                "url": "./ext/magento/inventory/InventoryWishlist",
+                "reference": "b99c938c86bb26b29d40f7785565abb71910557b"
+            },
+            "require": {
+                "magento/framework": "*",
+                "php": "~7.3.0||~7.4.0"
+            },
+            "suggest": {
+                "magento/module-inventory": "*",
+                "magento/module-wishlist": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Magento\\InventoryWishlist\\": ""
+                }
+            },
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "description": "N/A",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "magento/zendframework1",
@@ -13255,8 +15890,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "magento/inventory-metapackage": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
