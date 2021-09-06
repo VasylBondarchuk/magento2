@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">sample_grid.sample_grid_data_source</item>
+            <item name="deps" xsi:type="string">sample_grid.sample_grid_data_source</item>
+        </item>
+        <item name="spinner" xsi:type="string">sample_grid_columns</item>
+    </argument>
+    <dataSource name="sample_grid_data_source">
+        <settings>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <dataProvider class="Tsg\Improvements\Ui\Component\DataProvider\Grid" name="sample_grid_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <columns name="sample_grid_columns">
+        <column name="file_name" sortOrder="10">
+            <settings>
+                <filter>textRange</filter>
+                <label translate="true">File Name</label>
+                <sorting>asc</sorting>
+            </settings>
+        </column>
+        <column name="file_size" sortOrder="20">
+        <settings>
+            <filter>textRange</filter>
+            <label translate="true">File Size</label>
+        </settings>
+        </column>
+        <column name="modified_at" sortOrder="30">
+        <settings>
+            <filter>textRange</filter>
+            <label translate="true">Modified At</label>
+        </settings>
+        </column>
+        <actionsColumn name="actions" class="Tsg\Improvements\Ui\Component\Listing\Column\Actions">
+            <settings>
+                <label translate="true">Actions</label>
+            </settings>
+        </actionsColumn>
+    </columns>
+</listing>
